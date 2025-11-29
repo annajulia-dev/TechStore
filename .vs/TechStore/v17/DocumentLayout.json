@@ -1,0 +1,377 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\categoria\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\categoria\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\categoria\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\categoria\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\categoria\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\categoria\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\categoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\categoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\servico\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\servico\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\servico\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\servico\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\servico\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\servico\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\servico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\servico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\produto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\produto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\produto\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\produto\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\produto\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\produto\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\views\\produto\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\views\\produto\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\models\\servico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\models\\servico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|c:\\users\\aniyaw\\minhas coisas\\my documents\\projetos\\c#\\techstore\\techstore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5295D7C0-77DC-41FE-882C-E8C06331789D}|TechStore\\TechStore.csproj|solutionrelative:techstore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Categoria\\Create.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Categoria\\Create.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Categoria\\Create.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Categoria\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:05:09.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Categoria\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Categoria\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Categoria\\Delete.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Categoria\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:04:59.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Categoria\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Categoria\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Categoria\\Edit.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Categoria\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:04:45.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Categoria\\Index.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Categoria\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Categoria\\Index.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Categoria\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:04:10.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "TechStore\\Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Controllers\\CategoriaController.cs",
+              "RelativeToolTip": "TechStore\\Controllers\\CategoriaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:00:27.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Servico\\Create.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Servico\\Create.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Servico\\Create.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Servico\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:59:33.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Servico\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Servico\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Servico\\Delete.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Servico\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:59:14.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Servico\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Servico\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Servico\\Edit.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Servico\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:58:52.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Servico\\Index.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Servico\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Servico\\Index.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Servico\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:58:05.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServicoController.cs",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Controllers\\ServicoController.cs",
+              "RelativeDocumentMoniker": "TechStore\\Controllers\\ServicoController.cs",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Controllers\\ServicoController.cs",
+              "RelativeToolTip": "TechStore\\Controllers\\ServicoController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T15:54:10.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Produto\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Produto\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Produto\\Delete.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Produto\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:44:23.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Produto\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Produto\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Produto\\Edit.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Produto\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:42:15.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Produto\\Create.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Produto\\Create.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Produto\\Create.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Produto\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:39:33.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Produto\\Index.cshtml",
+              "RelativeDocumentMoniker": "TechStore\\Views\\Produto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Views\\Produto\\Index.cshtml",
+              "RelativeToolTip": "TechStore\\Views\\Produto\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T15:15:57.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "TechStore\\Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "TechStore\\Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:34:37.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Program.cs",
+              "RelativeDocumentMoniker": "TechStore\\Program.cs",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Program.cs",
+              "RelativeToolTip": "TechStore\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:32:03.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Models\\Produto.cs",
+              "RelativeDocumentMoniker": "TechStore\\Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Models\\Produto.cs",
+              "RelativeToolTip": "TechStore\\Models\\Produto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:25:01.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "TechStore\\Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Models\\Categoria.cs",
+              "RelativeToolTip": "TechStore\\Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:23:38.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Servico.cs",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Models\\Servico.cs",
+              "RelativeDocumentMoniker": "TechStore\\Models\\Servico.cs",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Models\\Servico.cs",
+              "RelativeToolTip": "TechStore\\Models\\Servico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:06:11.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TechStore\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "TechStore\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T13:49:48.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\appsettings.json",
+              "RelativeDocumentMoniker": "TechStore\\appsettings.json",
+              "ToolTip": "C:\\Users\\aniyaw\\minhas coisas\\My documents\\Projetos\\C#\\TechStore\\TechStore\\appsettings.json",
+              "RelativeToolTip": "TechStore\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-29T13:43:54.853Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

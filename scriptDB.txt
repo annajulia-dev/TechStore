@@ -1,0 +1,28 @@
+CREATE DATABASE db_TechStore;
+
+use db_TechStore;
+
+CREATE TABLE Servicos( 
+	Id int PRIMARY KEY AUTO_INCREMENT, 
+	Titulo varchar(50) NOT NULL, 
+	Descricao varchar(100), 
+	Valor decimal(10,2) NOT NULL, 
+	Url_foto varchar(200)
+);
+	
+CREATE TABLE Categorias(
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Titulo varchar(50) NOT NULL,
+    Descricao varchar(70)
+);
+
+CREATE TABLE Produtos(
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Titulo varchar(150) NOT NULL, 
+    Descricao varchar(1000), 
+    Valor decimal(10,2) NOT NULL, 
+    Url_foto varchar(200),
+    CategoriaId Int NOT NULL,
+    FOREIGN KEY (CategoriaId) REFERENCES categorias(Id)
+);
+

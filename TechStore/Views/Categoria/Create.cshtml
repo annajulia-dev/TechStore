@@ -1,0 +1,21 @@
+﻿@model TechStore.Models.Categoria
+
+@{
+}
+
+
+<h1>
+    Register a new categoria
+</h1>
+
+<div asp-validation-summary="All" class="text-danger"></div> <!--Msg de erro caso o create de errado-->
+
+<form asp-action="Create" method="post">
+
+    <label>Titulo:</label>
+    <input asp-for="Titulo" />
+    <label>Descrição:</label>
+    <input asp-for="Descricao" />
+
+    <button type="submit">Registrar</button>
+</form>

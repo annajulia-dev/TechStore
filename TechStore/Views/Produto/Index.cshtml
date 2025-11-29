@@ -1,0 +1,49 @@
+﻿@model IEnumerable<TechStore.Models.Produto>
+@{
+}
+
+
+<a asp-action="Create">Registar produto</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Descricao</th>
+            <th>Valor</th>
+            <th>Foto</th>
+            <th>Categoria</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Titulo
+                </td>
+                <td>
+                    @item.Descricao
+                </td>
+                <td>
+                    @item.Valor
+                </td>
+                <td>
+                    @item.Url_foto
+                </td>
+                <td>
+                    @item.Categoria.Titulo
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

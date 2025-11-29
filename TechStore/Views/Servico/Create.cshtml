@@ -1,0 +1,25 @@
+﻿@model TechStore.Models.Servico
+
+@{
+}
+
+
+<h1>
+    Register a new Product
+</h1>
+
+<div asp-validation-summary="All" class="text-danger"></div> <!--Msg de erro caso o create de errado-->
+
+<form asp-action="Create" method="post">
+
+    <label>Titulo:</label>
+    <input asp-for="Titulo" />
+    <label>Descrição:</label>
+    <input asp-for="Descricao" />
+    <label>Valor:</label>
+    <input asp-for="Valor" type="number" step="0.00" />
+    <label>Url Foto:</label>
+    <input asp-for="Url_foto" />
+
+    <button type="submit">Registrar</button>
+</form>

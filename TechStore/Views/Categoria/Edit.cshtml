@@ -1,0 +1,21 @@
+﻿@model TechStore.Models.Categoria
+@{
+}
+
+<h1>
+    Editar categoria
+</h1>
+
+<a asp-action="Index">Go back</a>
+
+<form asp-action="Edit" method="post">
+    <input asp-for="Id" type="hidden"/>
+
+
+    <label>Titulo:</label>
+    <input asp-for="Titulo" />
+    <label>Descricao:</label>
+    <input asp-for="Descricao" />
+
+    <button type="submit">Save changes</button>
+</form>

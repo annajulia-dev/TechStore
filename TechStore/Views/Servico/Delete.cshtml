@@ -1,0 +1,19 @@
+﻿@model TechStore.Models.Servico
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<h1> 
+    Delete the servico?
+</h1>
+
+<a asp-action="Index">Cancel</a>
+
+<form asp-action="Delete" method="post">
+    <input asp-for="Id" type="hidden" />
+
+    <button type="submit">Delete</button>
+</form>
