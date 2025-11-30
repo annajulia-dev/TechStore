@@ -35,7 +35,6 @@ C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\D
 C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\scopedcss\bundle\TechStore.styles.css
 C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\scopedcss\projectbundle\TechStore.bundle.scp.css
 C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\staticwebassets.build.json
@@ -48,3 +47,5 @@ C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\D
 C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\TechStore.pdb
 C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\TechStore.genruntimeconfig.cache
 C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\ref\TechStore.dll
+C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css
+C:\Users\aniyaw\minhas coisas\My documents\Projetos\C#\TechStore\TechStore\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutCliente.cshtml.rz.scp.css

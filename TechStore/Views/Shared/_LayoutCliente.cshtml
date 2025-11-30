@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TechStore.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/NavBar.css" />
+    <link rel="stylesheet" href="~/css/Products.css"/>
+    <link rel="stylesheet" href="~/css/General.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,8 +24,8 @@
                 <p class="home-text">Hugo TechStore</p>
             </div>
             <div class="middle">
-                <a asp-action="Index" asp-controller="Produto" class="nav-text">Produtos</a>
-                <a asp-action="Index" asp-controller="Servico" class="nav-text">Serviços</a>
+                <a asp-action="Produtos" asp-controller="Home" class="nav-text">Produtos</a>
+                <p class="nav-text">Serviços</p>
                 <p class="nav-text">Avaliações</p>
             </div>
             <div class="right-side">
