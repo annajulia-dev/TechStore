@@ -84,19 +84,48 @@ namespace TechStore.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Produto produtoEditado)
+        public async Task<IActionResult> Edit(int id, Produto produto, IFormFile? novaImagem)
         {
-            if (ModelState.IsValid)
+            if (id != produto.Id)
             {
-                _context.Produtos.Update(produtoEditado);
-                await _context.SaveChangesAsync();
-
-                return RedirectToAction("Index");
+                return NotFound();
             }
 
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Titulo", produtoEditado.CategoriaId);
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var produtoOriginal = await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
 
-            return View(produtoEditado);
+
+                    if (novaImagem != null && novaImagem.Length > 0)
+                    {
+     
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            await novaImagem.CopyToAsync(memoryStream);
+                            produto.Foto = memoryStream.ToArray(); 
+                        }
+                    }
+                    else
+                    {
+                        if (produtoOriginal != null)
+                        {
+                            produto.Foto = produtoOriginal.Foto;
+                        }
+                    }
+
+                    _context.Update(produto);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!_context.Produtos.Any(e => e.Id == produto.Id)) return NotFound();
+                    else throw;
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(produto);
         }
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
@@ -134,5 +163,6 @@ namespace TechStore.Controllers
             // Retorna o arquivo (bytes, tipo mime) 
             return File(produto.Foto, "image/jpeg");
         }
+
     }
 }

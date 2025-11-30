@@ -8,7 +8,7 @@
 
 <a asp-action="Index">Go back</a>
 
-<form asp-action="Edit" method="post">
+<form asp-action="Edit" enctype="multipart/form-data">
     <input asp-for="Id" type="hidden"/>
 
 
@@ -18,6 +18,17 @@
     <input asp-for="Descricao" />
     <label>Valor:</label>
     <input asp-for="Valor" />
+    <label>Foto Atual:</label><br />
+    @if (Model.Foto?.Length > 0)
+    {
+        <img src="@Url.Action("PegarFoto", "Servico", new { id = Model.Id })" style="max-width: 150px; margin-bottom: 10px;" />
+    }
+    <br />
+
+    <label>Alterar Imagem:</label>
+    <input type="file" name="novaImagem" class="form-control" />
+
+
 
     <button type="submit">Save changes</button>
 </form>

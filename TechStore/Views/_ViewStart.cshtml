@@ -1,12 +1,12 @@
 ﻿@{
     var controller = ViewContext.RouteData.Values["controller"]?.ToString();
 
-    if (controller == "Produto" || controller == "Servico")
+    if (controller == "Home")
     {
-        Layout = "_LayoutAdmin";
+        Layout = "_LayoutCliente";
     }
     else
     {
-        Layout = "_LayoutCliente";
+        Layout = "_LayoutAdmin";
     }
 }

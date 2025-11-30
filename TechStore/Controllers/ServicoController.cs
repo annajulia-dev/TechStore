@@ -17,10 +17,6 @@ namespace TechStore.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            // Ao invés de _context.Servicos.ToListAsync();
-            // Use o Select para escolher SÓ o que vai aparecer na tabela
-            // IMPORTANTE: Não inclua a propriedade Foto aqui!
-
             var lista = await _context.Servicos
                 .Select(s => new Servico
                 {
@@ -28,7 +24,6 @@ namespace TechStore.Controllers
                     Titulo = s.Titulo,
                     Descricao = s.Descricao,
                     Valor = s.Valor
-                    // Foto = s.Foto <--- NÃO COLOQUE ISSO
                 })
                 .ToListAsync();
 
@@ -87,13 +82,46 @@ namespace TechStore.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Servico servico)
+        public async Task<IActionResult> Edit(int id, Servico servico, IFormFile? novaImagem)
         {
+            if (id != servico.Id)
+            {
+                return NotFound();
+            }
+
             if (ModelState.IsValid)
             {
-                _context.Servicos.Update(servico);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
+                try
+                {
+                    var produtoOriginal = await _context.Servicos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+
+
+                    if (novaImagem != null && novaImagem.Length > 0)
+                    {
+
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            await novaImagem.CopyToAsync(memoryStream);
+                            servico.Foto = memoryStream.ToArray();
+                        }
+                    }
+                    else
+                    {
+                        if (produtoOriginal != null)
+                        {
+                            servico.Foto = produtoOriginal.Foto;
+                        }
+                    }
+
+                    _context.Update(servico);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!_context.Servicos.Any(e => e.Id == servico.Id)) return NotFound();
+                    else throw;
+                }
+                return RedirectToAction(nameof(Index));
             }
             return View(servico);
         }
