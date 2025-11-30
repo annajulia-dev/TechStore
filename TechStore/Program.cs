@@ -11,7 +11,11 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 // 2. Configura o contexto para usar MySQL (Pomelo)
 builder.Services.AddDbContext<AppDbContext>(options =>
-                                            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+    options.UseMySql(
+        connectionString,
+        ServerVersion.AutoDetect(connectionString) // Isso é exclusivo do Pomelo
+    )
+);
 
 var app = builder.Build();
 

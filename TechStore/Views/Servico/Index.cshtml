@@ -32,7 +32,7 @@
                     @item.Valor
                 </td>
                 <td>
-                    @item.Url_foto
+                    <img src="@Url.Action("PegarFoto", "Servico", new { id = @item.Id })" width="200" />
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>

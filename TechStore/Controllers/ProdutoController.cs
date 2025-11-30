@@ -38,17 +38,34 @@ namespace TechStore.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Se o usuário enviou arquivo
+                if (novoProduto.ArquivoFoto != null && novoProduto.ArquivoFoto.Length > 0)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        await novoProduto.ArquivoFoto.CopyToAsync(memoryStream);
+                        // Validação extra: Limitar tamanho (ex: 5MB) para não travar o banco
+                        if (memoryStream.Length < 5242880)
+                        {
+                            novoProduto.Foto = memoryStream.ToArray();
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("ArquivoFoto", "O arquivo não pode ser maior que 5MB.");
+                            return View(novoProduto);
+                        }
+                    }
+                }
+
                 _context.Produtos.Add(novoProduto);
-
                 await _context.SaveChangesAsync();
-
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
 
             ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Titulo");
-
             return View(novoProduto);
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
@@ -105,6 +122,17 @@ namespace TechStore.Controllers
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction("Index");
+        }
+
+        public IActionResult PegarFoto(int id)
+        {
+            var produto = _context.Produtos.Find(id);
+            if (produto == null || produto.Foto == null)
+            {
+                return NotFound();
+            }
+            // Retorna o arquivo (bytes, tipo mime) 
+            return File(produto.Foto, "image/jpeg");
         }
     }
 }

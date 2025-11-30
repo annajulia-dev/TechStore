@@ -33,10 +33,10 @@
                     @item.Valor
                 </td>
                 <td>
-                    @item.Url_foto
+                    <img src="@Url.Action("PegarFoto", "Produto", new { id = @item.Id })" width="200" />
                 </td>
                 <td>
-                    @item.Categoria.Titulo
+                    @item.Categoria?.Titulo
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>

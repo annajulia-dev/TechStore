@@ -7,7 +7,7 @@ CREATE TABLE Servicos(
 	Titulo varchar(50) NOT NULL, 
 	Descricao varchar(100), 
 	Valor decimal(10,2) NOT NULL, 
-	Url_foto varchar(200)
+	Foto LONGBLOB
 );
 	
 CREATE TABLE Categorias(
@@ -21,7 +21,7 @@ CREATE TABLE Produtos(
     Titulo varchar(150) NOT NULL, 
     Descricao varchar(1000), 
     Valor decimal(10,2) NOT NULL, 
-    Url_foto varchar(200),
+    Foto LONGBLOB, 
     CategoriaId Int NOT NULL,
     FOREIGN KEY (CategoriaId) REFERENCES categorias(Id)
 );
