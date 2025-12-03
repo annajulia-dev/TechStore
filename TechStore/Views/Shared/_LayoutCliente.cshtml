@@ -29,12 +29,12 @@
                 <p class="nav-text">Avaliações</p>
             </div>
             <div class="right-side">
-                <p class="nav-text">Meus Pedidos</p>
+                <a asp-action="Enter" asp-controller="Home" class="nav-text">Home</a>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div>
+        <main role="main" >
             @RenderBody()
         </main>
     </div>

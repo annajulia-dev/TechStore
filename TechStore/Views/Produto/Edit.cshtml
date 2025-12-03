@@ -1,39 +1,103 @@
 ﻿@model TechStore.Models.Produto
-@{
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja do Hugo - Editar Produto</title>
 
-<h1>
-    Editar produto
-</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/ProductEdit.css" />
+</head>
+<body>
 
-<a asp-action="Index">Go back</a>
+    <aside>
+        <div>
+            <div class="logo">Loja do Hugo</div>
+            <nav>
+                <ul>
+                    <li><a asp-action="Enter" asp-controller="Home"><i class="ph ph-squares-four"></i> Home</a></li>
+                    <li><a asp-action="Index" asp-controller="Produto" class="active"><i class="ph ph-package"></i> Produtos</a></li>
+                    <li><a asp-action="Index" asp-controller="Servico"><i class="ph ph-wrench"></i> Serviços</a></li>
+                </ul>
+            </nav>
+        </div>
 
-<form asp-action="Edit" enctype="multipart/form-data">
-    <input asp-for="Id" type="hidden"/>
-    <input type="hidden" asp-for="Foto" />
+        <div class="user-profile">
+            <div class="avatar-initial">J</div>
+            <div class="user-info">
+                <h4>João Pires</h4>
+                <p>joaopires@emailsdasilva.com</p>
+            </div>
+            <i class="ph ph-caret-right"></i>
+        </div>
+    </aside>
 
-    <label>Titulo:</label>
-    <input asp-for="Titulo" />
-    <label>Descricao:</label>
-    <input asp-for="Descricao" />
-    <label>Valor:</label>
-    <input asp-for="Valor" />
-    <label>Foto Atual:</label><br />
-    @if (Model.Foto?.Length > 0)
-    {
-        <img src="@Url.Action("PegarFoto", "Produto", new { id = Model.Id })" style="max-width: 150px; margin-bottom: 10px;" />
-    }
-    <br />
+    <main>
+        <h2>Editar Produto</h2>
 
-    <label>Alterar Imagem:</label>
-    <input type="file" name="novaImagem" class="form-control" />
+        <form asp-action="Edit" enctype="multipart/form-data" class="form-card">
 
+            <div class="form-group">
+                <label for="titulo">Título do Produto</label>
+                <input asp-for="Titulo" type="text" id="titulo"placeholder="Ex: Cadeira Gamer">
+            </div>
 
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <textarea  asp-for="Descricao" id="descricao" placeholder="Descreva os detalhes do produto..."></textarea>
+            </div>
 
-    <label>Categoria:</label>
-    <select asp-for="CategoriaId" asp-items="ViewBag.CategoriaId">
-        <option value="">-- Selecione a categoria --</option>
-    </select>
+            <div class="form-row">
+                <div>
+                    <label for="categoria">Categoria</label>
+                    <select asp-for="CategoriaId" asp-items="ViewBag.CategoriaId" id="categoria">
+                        <option value="">-- Selecione a categoria --</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="valor">Valor (R$)</label>
+                    <input asp-for="Valor" type="number" id="valor" step="0.01">
+                </div>
+            </div>
 
-    <button type="submit">Save changes</button>
-</form>
+            <div class="form-group">
+                <label>Gerenciar Imagens</label>
+                <div class="photos-container">
+
+                    <div class="photo-box">
+                        <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;">Foto Atual</span>
+                        <div class="old-photo-preview">
+                            <i class="ph ph-image" style="font-size: 32px; margin-right: 8px;"></i>
+                            @if (Model.Foto?.Length > 0)
+                            {
+                                <img src="@Url.Action("PegarFoto", "Produto", new { id = Model.Id })" style="max-width: 150px" />
+                            }
+                        </div>
+                    </div>
+
+                    <div class="photo-box">
+                        <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;">Substituir Foto</span>
+                        <label class="upload-area">
+                            <input name="novaImagem" type="file" hidden accept="image/*">
+                            <i class="ph ph-upload-simple upload-icon"></i>
+                            <p class="upload-text"><span>Clique para enviar</span> ou arraste</p>
+                            <p style="font-size: 11px; color: #9ca3af; margin-top: 4px;">PNG, JPG até 5MB</p>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button asp-action="Index" asp-controller="Produto">Cancelar</button>
+                <button type="submit" class="btn btn-save">Salvar Alterações</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

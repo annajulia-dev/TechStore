@@ -1,49 +1,130 @@
 ﻿@model IEnumerable<TechStore.Models.Produto>
 @{
+
 }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja do Hugo - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/ProductIndex.css" />
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <aside>
+        <div>
+            <div class="logo">Loja do Hugo</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a asp-action="Enter" asp-controller="Home">
+                            <i class="ph ph-squares-four"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Produto" class="active">
+                            <i class="ph ph-package"></i>
+                            Produtos
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Servico">
+                            <i class="ph ph-wrench"></i>
+                            Serviços
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="user-profile">
+            <div class="avatar-initial">J</div>
+            <div class="user-info">
+                <h4>João Pires</h4>
+                <p>joaopires@emailsdasilva.com</p>
+            </div>
+            <i class="ph ph-caret-right"></i>
+        </div>
+    </aside>
+
+    <main>
+        <h2>Produtos</h2>
+
+        <section class="products-grid">
+            @foreach(var produto in Model)
+            {
+                <a asp-action="Details" asp-route-id="@produto.Id" asp-controller="Produto">
+                    <div class="product-card">
+                            <img class="card-image"src="@Url.Action("PegarFoto", "Produto", new { id = produto.Id })" />
+                        <h3>@produto.Titulo</h3>
+                        <p class="product-price">R$: @produto.Valor</p>
+                        <p class="product-stock">03 unidades</p>
+                    </div>
+                </a>
+                
+            }
+        </section>
+        <a asp-action="Create" asp-controller="Produto">
+            <button class="btn-create">
+                <i class="ph ph-plus" style="font-size: 16px;"></i>
+                Criar Produto
+            </button>
+        </a>
 
 
-<a asp-action="Create">Registar produto</a>
+        <h2>Pedidos</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Titulo</th>
-            <th>Descricao</th>
-            <th>Valor</th>
-            <th>Foto</th>
-            <th>Categoria</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @item.Id    
-                </td>
-                <td>
-                    @item.Titulo
-                </td>
-                <td>
-                    @item.Descricao
-                </td>
-                <td>
-                    @item.Valor
-                </td>
-                <td>
-                    <img src="@Url.Action("PegarFoto", "Produto", new { id = @item.Id })" width="200" />
-                </td>
-                <td>
-                    @item.Categoria?.Titulo
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
-                </td>
-            </tr>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th><i class="ph ph-package"></i> Pedido</th>
+                        <th><i class="ph ph-text-aa"></i> Nome</th>
+                        <th><i class="ph ph-record"></i> Status</th>
+                        <th><i class="ph ph-calendar-blank"></i> Pedido Em</th>
+                        <th><i class="ph ph-calendar-check"></i> Entregue Em</th>
+                        <th><i class="ph ph-stack"></i> Qtd</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#" class="link-product">Produto 1</a></td>
+                        <td>
+                            <div class="user-cell">
+                                <div class="avatar-initial" style="background: #99f6e4; color: #115e59; width: 28px; height: 28px; font-size: 12px;">M</div>
+                                Mariana Cardoso
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-delivered">Entregue</span></td>
+                        <td>21:30, 24 de Abril, 2026</td>
+                        <td>21:47, 24 de Abril, 2026</td>
+                        <td>01</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="link-product">Produto 2</a></td>
+                        <td>
+                            <div class="user-cell">
+                                <div class="avatar-initial" style="background: #bfdbfe; color: #1e40af; width: 28px; height: 28px; font-size: 12px;">M</div>
+                                Mateus Silva
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-progress">Em Andamento</span></td>
+                        <td>22:59, 24 de Abril, 2026</td>
+                        <td>-</td>
+                        <td>01</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        }
-    </tbody>
-</table>
+    </main>
+</body>
+</html>

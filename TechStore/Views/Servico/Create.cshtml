@@ -1,25 +1,111 @@
 ﻿@model TechStore.Models.Servico
-
 @{
+    ViewData["Title"] = "Cadastrar Serviço";
 }
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja do Hugo - @ViewData["Title"]</title>
 
-<h1>
-    Register a new Product
-</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<div asp-validation-summary="All" class="text-danger"></div> <!--Msg de erro caso o create de errado-->
+    <link rel="stylesheet" href="~/css/ProductCreate.css" />
+</head>
+<body>
 
-<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <aside>
+        <div>
+            <div class="logo">Loja do Hugo</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a asp-action="Enter" asp-controller="Home">
+                            <i class="ph ph-squares-four"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Produto">
+                            <i class="ph ph-package"></i> Produtos
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Servico" class="active">
+                            <i class="ph ph-wrench"></i> Serviços
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    <label>Titulo:</label>
-    <input asp-for="Titulo" />
-    <label>Descrição:</label>
-    <input asp-for="Descricao" />
-    <label>Valor:</label>
-    <input asp-for="Valor" type="number" step="0.01" />
-    <label>Foto:</label>
-    <input asp-for="ArquivoFoto" type="file" />
+        <div class="user-profile">
+            <div class="avatar-initial">J</div>
+            <div class="user-info">
+                <h4>João Pires</h4>
+                <p>joaopires@emailsdasilva.com</p>
+            </div>
+            <i class="ph ph-caret-right"></i>
+        </div>
+    </aside>
 
-    <button type="submit">Registrar</button>
-</form>
+    <main>
+        <h2>Cadastrar Serviço</h2>
+
+        <form asp-action="Create" asp-controller="Servico" method="post" enctype="multipart/form-data" class="form-card">
+
+            <div class="form-group">
+                <label asp-for="Titulo">Título do Serviço</label>
+                <input asp-for="Titulo" type="text" id="titulo" placeholder="Ex: Formatação de Computador" required>
+                <span asp-validation-for="Titulo" style="color:red; font-size:12px;"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Descricao">Descrição Detalhada</label>
+                <textarea asp-for="Descricao" id="descricao" placeholder="Descreva o que está incluso no serviço..."></textarea>
+                <span asp-validation-for="Descricao" style="color:red; font-size:12px;"></span>
+            </div>
+
+            <div class="form-row-half">
+                <div>
+                    <label asp-for="Valor">Valor (R$)</label>
+                    <input asp-for="Valor" type="number" id="valor" step="0.01" placeholder="0,00" required>
+                    <span asp-validation-for="Valor" style="color:red; font-size:12px;"></span>
+                </div>
+                <div></div>
+            </div>
+
+            <div class="form-group">
+                <label>Foto do Serviço</label>
+                <div class="photos-container">
+
+                    <div class="photo-box" style="grid-column: span 2;">
+                        <span style="font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;">Enviar Imagem</span>
+                        <label class="upload-area">
+                            <input asp-for="ArquivoFoto" type="file" hidden accept="image/*">
+
+                            <i class="ph ph-upload-simple upload-icon"></i>
+                            <p class="upload-text"><span>Clique para enviar</span> ou arraste</p>
+                            <p style="font-size: 11px; color: #9ca3af; margin-top: 4px;">PNG, JPG até 5MB</p>
+                        </label>
+                        <span asp-validation-for="ArquivoFoto" style="color:red; font-size:12px;"></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <a asp-action="Index" asp-controller="Servico" style="text-decoration:none;">
+                    <button type="button" class="btn btn-cancel">Cancelar</button>
+                </a>
+                <button type="submit" class="btn btn-save">Cadastrar Serviço</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

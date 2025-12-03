@@ -1,0 +1,141 @@
+﻿@model TechStore.Models.Servico
+@{
+    ViewData["Title"] = "Detalhes do Serviço";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja do Hugo - @ViewData["Title"]</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/ServicoDetails.css" />
+</head>
+<body>
+
+    <aside>
+        <div>
+            <div class="logo">Loja do Hugo</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a asp-action="Enter" asp-controller="Home">
+                            <i class="ph ph-squares-four"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Produto">
+                            <i class="ph ph-package"></i> Produtos
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Servico" class="active">
+                            <i class="ph ph-wrench"></i> Serviços
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="user-profile">
+            <div class="avatar-initial">J</div>
+            <div class="user-info">
+                <h4>João Pires</h4>
+                <p>joaopires@emailsdasilva.com</p>
+            </div>
+            <i class="ph ph-caret-right"></i>
+        </div>
+    </aside>
+
+    <main>
+        <div class="product-detail-card">
+            <div class="product-info">
+                <h1>@Model.Titulo</h1>
+
+                <div class="meta-group">
+                    <div class="meta-label">
+                        <i class="ph ph-calendar-blank"></i> Disponibilizado Em
+                    </div>
+                    <div class="meta-value">20:24, 24 de Abril, 2026</div>
+                </div>
+
+                <div class="meta-group">
+                    <div class="meta-label">
+                        <i class="ph ph-currency-dollar"></i> Preço Atual
+                    </div>
+                    <div class="meta-value">R$ @Model.Valor.ToString("N2")</div>
+                </div>
+
+                <div class="meta-group">
+                    <div class="meta-label">
+                        <i class="ph ph-article"></i> Descrição
+                    </div>
+                    <div class="meta-value">@Model.Descricao</div>
+                </div>
+
+                <div class="meta-group">
+                    <div class="meta-label">
+                        <i class="ph ph-check-circle"></i> Disponibilidade
+                    </div>
+                    <div class="meta-value">Ativo</div>
+                </div>
+
+                <div class="actions-row">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" asp-controller="Servico" style="text-decoration: none;">
+                        <button class="btn btn-edit">
+                            <i class="ph ph-pencil-simple"></i> Editar Serviço
+                        </button>
+                    </a>
+
+                    <a asp-action="Delete" asp-route-id="@Model.Id" asp-controller="Servico" style="text-decoration: none;">
+                        <button class="btn btn-remove">
+                            <i class="ph ph-x"></i> Remover Serviço
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <img class="product-detail-image"
+                 src="@Url.Action("PegarFoto", "Servico", new { id = Model.Id })"
+                 alt="@Model.Titulo"
+                 onerror="this.src='https://via.placeholder.com/320x320?text=Sem+Foto';" />
+        </div>
+
+        <h2 class="section-title">Pedidos</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;"><i class="ph ph-text-aa"></i> Nome</th>
+                        <th style="width: 15%;"><i class="ph ph-record"></i> Status</th>
+                        <th style="width: 25%;"><i class="ph ph-calendar-blank"></i> Pedido Em</th>
+                        <th style="width: 25%;"><i class="ph ph-calendar-check"></i> Finalizado Em</th>
+                        <th style="width: 10%;"><i class="ph ph-stack"></i> Qtd</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="user-cell">
+                                <div class="avatar-sm" style="background: #bfdbfe; color: #1e40af;">M</div>
+                                Mateus Silva
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-progress" style="background-color: #ccfbf1; color: #0f766e;">Em Andamento</span></td>
+                        <td>22:59, 24 de Abril, 2026</td>
+                        <td>-</td>
+                        <td>01</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</body>
+</html>

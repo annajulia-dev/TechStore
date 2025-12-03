@@ -1,6 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;900&family=Inter:wght@400;500;600&display=swap');
 
-/* --- Reset e Estilos Gerais --- */
 body {
     padding-top: 85px;
     padding-left: 10%;
@@ -12,7 +11,7 @@ body {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Adicionado para garantir larguras corretas */
+    box-sizing: border-box; 
 }
 
 p {
@@ -29,7 +28,6 @@ a {
         color: #808080;
     }
 
-/* --- Nav Bar (Mantida conforme seu código) --- */
 .nav-bar {
     font-family: "Figtree", Arial;
     box-sizing: border-box;
@@ -38,13 +36,13 @@ a {
     left: 0px;
     right: 0px;
     height: 57px;
-    z-index: 100; /* Aumentei o z-index por segurança */
+    z-index: 100; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 2px solid rgb(212, 212, 212);
     background-color: white;
-    padding: 0 5%; /* Padding padrão mobile */
+    padding: 0 5%; 
 }
 
 .left-side, .right-side, .middle {
@@ -85,7 +83,6 @@ a {
 
 
 
-/* --- Responsividade da Nav e Body --- */
 @media (min-width: 768px) {
     .nav-bar {
         padding: 0 10%;
@@ -103,11 +100,9 @@ a {
 
 @media (min-width: 992px) {
     .services-grid {
-        /* O 'repeat(3, 1fr)' garante exatamente 3 colunas iguais */
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Ajuste opcional para a barra de navegação acompanhar a largura */
     .nav-bar {
         padding: 0 10%;
     }
@@ -127,13 +122,11 @@ a {
         padding-left: 15%;
         padding-right: 15%;
     }
-    /* Na imagem de referência são 3 colunas, ajustei aqui */
     .services-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-/* --- Títulos da Página --- */
 .page-title {
     font-family: "Figtree", sans-serif;
     font-weight: 700;
@@ -142,21 +135,17 @@ a {
     color: #000;
 }
 
-/* --- Grid de Serviços --- */
 .services-grid {
     display: grid;
-    /* Começa com 1 coluna no celular */
     column-gap: 20px;
     row-gap: 40px;
     margin-bottom: 50px;
 }
 
-/* --- Card do Serviço --- */
 .service-card {
     display: flex;
     flex-direction: column;
     background-color: white;
-    /* Se quiser borda ou sombra suave, adicione aqui. Na imagem parece clean. */
 }
 
 .service-image-container {
@@ -165,7 +154,7 @@ a {
     margin-bottom: 12px;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #f0f0f0; /* Cor de fundo enquanto carrega */
+    background-color: #f0f0f0; 
 }
 
 .service-image {
@@ -176,7 +165,7 @@ a {
 }
 
 .service-card:hover .service-image {
-    transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+    transform: scale(1.05); 
 }
 
 .service-info {
@@ -186,7 +175,7 @@ a {
 }
 
 .service-title {
-    font-size: 16px; /* Ajustado visualmente */
+    font-size: 16px;
     font-weight: 600;
     color: #000;
 }
@@ -218,13 +207,13 @@ a {
 }
 
 .price-value {
-    color: #0D6EFD; /* Azul igual ao botão */
+    color: #0D6EFD;
     font-weight: 700;
 }
 
 .schedule-button {
     background-color: #0D6EFD;
-    width: 100%; /* Ocupa largura total do card */
+    width: 100%;
     height: 40px;
     border-radius: 8px;
     border: none;

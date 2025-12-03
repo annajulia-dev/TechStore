@@ -25,6 +25,20 @@ namespace TechStore.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.Id == id);
+
+            if (produto == null)
+                return NotFound();
+
+            return View(produto);
+        }
+
+        [HttpGet]
         public IActionResult Create()
         {
 

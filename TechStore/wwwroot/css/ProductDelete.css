@@ -1,0 +1,255 @@
+﻿
+:root {
+    --bg-body: #ffffff;
+    --bg-sidebar: #ffffff;
+    --bg-active: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --border-color: #e5e7eb;
+    --red-bg: #ef4444; 
+    --red-dark: #b91c1c;
+    --red-light: #fef2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    display: flex;
+    min-height: 100vh;
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+
+aside {
+    width: 260px;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid transparent;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    filter: blur(2px) grayscale(0.5);
+    opacity: 0.6;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    nav ul li a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 15px;
+        background: #fff;
+    }
+
+        nav ul li a.active {
+            background-color: var(--bg-active);
+            font-weight: 600;
+        }
+
+        nav ul li a i {
+            font-size: 20px;
+            color: #4b5563;
+        }
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.avatar-initial {
+    width: 36px;
+    height: 36px;
+    background-color: #dbeafe;
+    color: #1e40af;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    min-width: 36px;
+    flex-shrink: 0;
+}
+
+.user-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.user-info p {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+main {
+    flex: 1;
+    padding: 32px 48px;
+    filter: blur(2px) grayscale(0.5);
+    opacity: 0.6;
+    pointer-events: none; 
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+    backdrop-filter: blur(2px); 
+}
+
+.modal-card {
+    background-color: white;
+    width: 100%;
+    max-width: 440px;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.alert-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: var(--red-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+    .alert-icon-wrapper i {
+        font-size: 32px;
+        color: var(--red-bg);
+    }
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.modal-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.product-highlight {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+
+.modal-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-cancel {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+    .btn-cancel:hover {
+        background-color: #f9fafb;
+    }
+
+.btn-delete {
+    background-color: var(--red-bg);
+    color: white;
+    border: 1px solid transparent;
+}
+
+    .btn-delete:hover {
+        background-color: var(--red-dark);
+        box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+    }
+
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+        display: none;
+    }
+    main {
+        display: none;
+    }
+
+    .modal-overlay {
+        background-color: #f3f4f6;
+    }
+
+    .modal-card {
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+}
