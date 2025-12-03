@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TechStore.Models.Servico>
+@{
+    ViewData["Title"] = "Servicos";
+}
+<link rel="stylesheet" href="~/css/ServicosEntirePage.css" />
+
+
+
+    <h2 class="page-title">Serviços</h2>
+
+    <div class="services-grid">
+    @foreach(var servico in Model)
+    {
+        <div class="service-card">
+            <div class="service-image-container">
+                <img src="@Url.Action("PegarFotoServico", "Home", new { id = @servico.Id })" class="service-image">
+            </div>
+            <div class="service-info">
+                <h3 class="service-title">@servico.Titulo</h3>
+
+                <p class="service-description">@servico.Descricao</p>
+
+                <p class="service-price">Serviço à partir de <span class="price-value">R$ @servico.Valor</span></p>
+
+                <button class="schedule-button">Agendar Serviço</button>
+            </div>
+        </div>
+    }
+    
+
+    </div>
+
+

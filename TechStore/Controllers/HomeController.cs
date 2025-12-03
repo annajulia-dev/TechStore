@@ -30,6 +30,11 @@ namespace TechStore.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Servicos()
+        {
+            var servicos = await _context.Servicos.ToListAsync();
+            return View(servicos);
+        }
         public IActionResult PegarFoto(int id)
         {
             var produto = _context.Produtos.Find(id);
@@ -39,6 +44,17 @@ namespace TechStore.Controllers
             }
             // Retorna o arquivo (bytes, tipo mime) 
             return File(produto.Foto, "image/jpeg");
+        }
+
+        public IActionResult PegarFotoServico(int id)
+        {
+            var servico = _context.Servicos.Find(id);
+            if (servico == null || servico.Foto == null)
+            {
+                return NotFound();
+            }
+            // Retorna o arquivo (bytes, tipo mime) 
+            return File(servico.Foto, "image/jpeg");
         }
     }
 }

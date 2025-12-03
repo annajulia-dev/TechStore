@@ -1,0 +1,241 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;900&family=Inter:wght@400;500;600&display=swap');
+
+/* --- Reset e Estilos Gerais --- */
+body {
+    padding-top: 85px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: "Inter", Arial, sans-serif;
+    background-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adicionado para garantir larguras corretas */
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: #808080;
+    }
+
+/* --- Nav Bar (Mantida conforme seu código) --- */
+.nav-bar {
+    font-family: "Figtree", Arial;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 57px;
+    z-index: 100; /* Aumentei o z-index por segurança */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(212, 212, 212);
+    background-color: white;
+    padding: 0 5%; /* Padding padrão mobile */
+}
+
+.left-side, .right-side, .middle {
+    display: flex;
+    align-items: center;
+}
+
+.left-side {
+    justify-content: start;
+    width: auto;
+}
+
+.middle {
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.right-side {
+    justify-content: end;
+    width: auto;
+}
+
+.home-text {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.nav-text {
+    font-size: 18px;
+}
+
+@media (min-width: 650px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+/* --- Responsividade da Nav e Body --- */
+@media (min-width: 768px) {
+    .nav-bar {
+        padding: 0 10%;
+    }
+
+    body {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .services-grid {
+        /* O 'repeat(3, 1fr)' garante exatamente 3 colunas iguais */
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Ajuste opcional para a barra de navegação acompanhar a largura */
+    .nav-bar {
+        padding: 0 10%;
+    }
+
+    body {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-bar {
+        padding: 0 15%;
+    }
+
+    body {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    /* Na imagem de referência são 3 colunas, ajustei aqui */
+    .services-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* --- Títulos da Página --- */
+.page-title {
+    font-family: "Figtree", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* --- Grid de Serviços --- */
+.services-grid {
+    display: grid;
+    /* Começa com 1 coluna no celular */
+    column-gap: 20px;
+    row-gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* --- Card do Serviço --- */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    /* Se quiser borda ou sombra suave, adicione aqui. Na imagem parece clean. */
+}
+
+.service-image-container {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Cor de fundo enquanto carrega */
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+}
+
+.service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.service-title {
+    font-size: 16px; /* Ajustado visualmente */
+    font-weight: 600;
+    color: #000;
+}
+
+.service-time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+    .service-time svg {
+        width: 16px;
+        height: 16px;
+        fill: #666;
+    }
+
+.service-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.service-price {
+    font-size: 14px;
+    color: #333;
+}
+
+.price-value {
+    color: #0D6EFD; /* Azul igual ao botão */
+    font-weight: 700;
+}
+
+.schedule-button {
+    background-color: #0D6EFD;
+    width: 100%; /* Ocupa largura total do card */
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    .schedule-button:hover {
+        background-color: #0b5ed7;
+    }
