@@ -1,6 +1,6 @@
-﻿@model TechStore.Models.Servico
+﻿@model TechStore.Models.Categoria
 @{
-    ViewData["Title"] = "Detalhes do Serviço";
+    ViewData["Title"] = "Detalhes da Categoria";
 }
 
 <!DOCTYPE html>
@@ -34,12 +34,12 @@
                         </a>
                     </li>
                     <li>
-                        <a asp-action="Index" asp-controller="Servico" class="active">
+                        <a asp-action="Index" asp-controller="Servico">
                             <i class="ph ph-wrench"></i> Serviços
                         </a>
                     </li>
                     <li>
-                        <a asp-action="Index" asp-controller="Categoria">
+                        <a asp-action="Index" asp-controller="Categoria" class="active">
                             <i class="ph ph-tag"></i> Categorias
                         </a>
                     </li>
@@ -64,16 +64,9 @@
 
                 <div class="meta-group">
                     <div class="meta-label">
-                        <i class="ph ph-calendar-blank"></i> Disponibilizado Em
+                        <i class="ph ph-calendar-blank"></i> Criado Em
                     </div>
                     <div class="meta-value">20:24, 24 de Abril, 2026</div>
-                </div>
-
-                <div class="meta-group">
-                    <div class="meta-label">
-                        <i class="ph ph-currency-dollar"></i> Preço Atual
-                    </div>
-                    <div class="meta-value">R$ @Model.Valor.ToString("N2")</div>
                 </div>
 
                 <div class="meta-group">
@@ -85,57 +78,56 @@
 
                 <div class="meta-group">
                     <div class="meta-label">
-                        <i class="ph ph-check-circle"></i> Disponibilidade
+                        <i class="ph ph-check-circle"></i> Status
                     </div>
                     <div class="meta-value">Ativo</div>
                 </div>
 
                 <div class="actions-row">
-                    <a asp-action="Edit" asp-route-id="@Model.Id" asp-controller="Servico" style="text-decoration: none;">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" asp-controller="Categoria" style="text-decoration: none;">
                         <button class="btn btn-edit">
-                            <i class="ph ph-pencil-simple"></i> Editar Serviço
+                            <i class="ph ph-pencil-simple"></i> Editar Categoria
                         </button>
                     </a>
 
-                    <a asp-action="Delete" asp-route-id="@Model.Id" asp-controller="Servico" style="text-decoration: none;">
+                    <a asp-action="Delete" asp-route-id="@Model.Id" asp-controller="Categoria" style="text-decoration: none;">
                         <button class="btn btn-remove">
-                            <i class="ph ph-x"></i> Remover Serviço
+                            <i class="ph ph-x"></i> Remover Categoria
                         </button>
                     </a>
                 </div>
             </div>
 
-            <img class="product-detail-image"
-                 src="@Url.Action("PegarFoto", "Servico", new { id = Model.Id })"
-                 alt="@Model.Titulo"
-                 onerror="this.src='https://via.placeholder.com/320x320?text=Sem+Foto';" />
+            <div class="product-detail-image" style="display: flex; align-items: center; justify-content: center; color: #9ca3af; background-color: #f3f4f6;">
+                <i class="ph ph-tag" style="font-size: 128px;"></i>
+            </div>
         </div>
 
-        <h2 class="section-title">Pedidos</h2>
+        <h2 class="section-title">Produtos nesta Categoria</h2>
 
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 25%;"><i class="ph ph-text-aa"></i> Nome</th>
+                        <th style="width: 25%;"><i class="ph ph-package"></i> Produto</th>
                         <th style="width: 15%;"><i class="ph ph-record"></i> Status</th>
-                        <th style="width: 25%;"><i class="ph ph-calendar-blank"></i> Pedido Em</th>
-                        <th style="width: 25%;"><i class="ph ph-calendar-check"></i> Finalizado Em</th>
-                        <th style="width: 10%;"><i class="ph ph-stack"></i> Qtd</th>
+                        <th style="width: 25%;"><i class="ph ph-calendar-blank"></i> Adicionado Em</th>
+                        <th style="width: 10%;"><i class="ph ph-stack"></i> Estoque</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
                             <div class="user-cell">
-                                <div class="avatar-sm" style="background: #bfdbfe; color: #1e40af;">C</div>
-                                Cauã da Silva
+                                <div class="avatar-sm" style="background: #e5e7eb; color: #374151;">
+                                    <i class="ph ph-cube"></i>
+                                </div>
+                                Exemplo de Produto A
                             </div>
                         </td>
-                        <td><span class="status-badge status-progress" style="background-color: #ccfbf1; color: #0f766e;">Em Andamento</span></td>
-                        <td>22:59, 24 de Abril, 2026</td>
-                        <td>-</td>
-                        <td>01</td>
+                        <td><span class="status-badge status-progress" style="background-color: #dbeafe; color: #1e40af;">Disponível</span></td>
+                        <td>24 de Abril, 2026</td>
+                        <td>15</td>
                     </tr>
                 </tbody>
             </table>

@@ -22,7 +22,16 @@ namespace TechStore.Controllers
             var produtos = await _context.Produtos.
                                           Include(p => p.Categoria).
                                           ToListAsync();
-            return View(produtos);
+
+            var categorias = await _context.Categorias.ToListAsync();
+
+            var viewModel = new ProdutosViewModel
+            {
+                Produtos = produtos,
+                Categorias = categorias
+            };
+
+            return View(viewModel);
         }
 
         public IActionResult Enter()
@@ -34,27 +43,6 @@ namespace TechStore.Controllers
         {
             var servicos = await _context.Servicos.ToListAsync();
             return View(servicos);
-        }
-        public IActionResult PegarFoto(int id)
-        {
-            var produto = _context.Produtos.Find(id);
-            if (produto == null || produto.Foto == null)
-            {
-                return NotFound();
-            }
-            // Retorna o arquivo (bytes, tipo mime) 
-            return File(produto.Foto, "image/jpeg");
-        }
-
-        public IActionResult PegarFotoServico(int id)
-        {
-            var servico = _context.Servicos.Find(id);
-            if (servico == null || servico.Foto == null)
-            {
-                return NotFound();
-            }
-            // Retorna o arquivo (bytes, tipo mime) 
-            return File(servico.Foto, "image/jpeg");
         }
     }
 }

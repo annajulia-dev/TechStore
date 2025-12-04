@@ -44,6 +44,20 @@
     </style>
 </head>
 <body>
+    <header>
+        <nav class="nav-bar">
+            <div class="left-side">
+                <p class="home-text">Hugo TechStore</p>
+            </div>
+            <div class="middle">
+                Selecione o tipo de sessão
+            </div>
+            <div class="right-side">
+                <a asp-action="Enter" asp-controller="Home" class="nav-text">Home</a>
+            </div>
+        </nav>
+    </header>
+
     <div class="center">
         <a asp-action="Produtos" asp-controller="Home">
             <button class="btn-client">

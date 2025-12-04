@@ -21,7 +21,27 @@ namespace TechStore.Controllers
 
             return View(categorias);
         }
+        [HttpGet]
+        [HttpGet]
+        public async Task<IActionResult> Details(int? id) 
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+
+            var categoria = await _context.Categorias
+                .Include(c => c.Produto)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (categoria == null)
+            {
+                return NotFound();
+            }
+
+            return View(categoria);
+        }
         [HttpGet]
         public IActionResult Create()
         {

@@ -17,15 +17,7 @@ namespace TechStore.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var lista = await _context.Servicos
-                .Select(s => new Servico
-                {
-                    Id = s.Id,
-                    Titulo = s.Titulo,
-                    Descricao = s.Descricao,
-                    Valor = s.Valor
-                })
-                .ToListAsync();
+            var lista = await _context.Servicos.ToListAsync();
 
             return View(lista);
         }
@@ -57,13 +49,11 @@ namespace TechStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Se o usuário enviou arquivo
                 if (servico.ArquivoFoto != null && servico.ArquivoFoto.Length > 0)
                 {
                     using (var memoryStream = new MemoryStream())
                     {
                         await servico.ArquivoFoto.CopyToAsync(memoryStream);
-                        // Validação extra: Limitar tamanho (ex: 5MB) para não travar o banco
                         if (memoryStream.Length < 5242880)
                         {
                             servico.Foto = memoryStream.ToArray();
@@ -178,7 +168,6 @@ namespace TechStore.Controllers
             {
                 return NotFound();
             }
-            // Retorna o arquivo (bytes, tipo mime) 
             return File(servico.Foto, "image/jpeg");
         }
     }

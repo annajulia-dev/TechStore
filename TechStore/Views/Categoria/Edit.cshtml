@@ -1,21 +1,90 @@
 ﻿@model TechStore.Models.Categoria
 @{
+    ViewData["Title"] = "Editar Categoria";
 }
 
-<h1>
-    Editar categoria
-</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja do Hugo - @ViewData["Title"]</title>
 
-<a asp-action="Index">Go back</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<form asp-action="Edit" method="post">
-    <input asp-for="Id" type="hidden"/>
+    <link rel="stylesheet" href="~/css/ProductEdit.css" />
+</head>
+<body>
 
+    <aside>
+        <div>
+            <div class="logo">Loja do Hugo</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a asp-action="Enter" asp-controller="Home">
+                            <i class="ph ph-squares-four"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Produto">
+                            <i class="ph ph-package"></i> Produtos
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Servico">
+                            <i class="ph ph-wrench"></i> Serviços
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Categoria" class="active">
+                            <i class="ph ph-tag"></i> Categorias
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    <label>Titulo:</label>
-    <input asp-for="Titulo" />
-    <label>Descricao:</label>
-    <input asp-for="Descricao" />
+        <div class="user-profile">
+            <div class="avatar-initial">J</div>
+            <div class="user-info">
+                <h4>João Pires</h4>
+                <p>joaopires@emailsdasilva.com</p>
+            </div>
+            <i class="ph ph-caret-right"></i>
+        </div>
+    </aside>
 
-    <button type="submit">Save changes</button>
-</form>
+    <main>
+        <h2>Editar Categoria</h2>
+
+        <form asp-action="Edit" asp-controller="Categoria" class="form-card">
+
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="Titulo">Título da Categoria</label>
+                <input asp-for="Titulo" type="text" id="titulo" placeholder="Ex: Hardware">
+                <span asp-validation-for="Titulo" style="color:red; font-size:12px;"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Descricao">Descrição</label>
+                <textarea asp-for="Descricao" id="descricao" placeholder="Descreva o tipo de produtos desta categoria..."></textarea>
+                <span asp-validation-for="Descricao" style="color:red; font-size:12px;"></span>
+            </div>
+
+            <div class="form-actions">
+                <a asp-action="Index" asp-controller="Categoria" style="text-decoration:none;">
+                    <button type="button" class="btn btn-cancel">Cancelar</button>
+                </a>
+                <button type="submit" class="btn btn-save">Salvar Alterações</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

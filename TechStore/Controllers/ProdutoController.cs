@@ -52,13 +52,13 @@ namespace TechStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Se o usuário enviou arquivo
+
                 if (novoProduto.ArquivoFoto != null && novoProduto.ArquivoFoto.Length > 0)
                 {
                     using (var memoryStream = new MemoryStream())
                     {
                         await novoProduto.ArquivoFoto.CopyToAsync(memoryStream);
-                        // Validação extra: Limitar tamanho (ex: 5MB) para não travar o banco
+
                         if (memoryStream.Length < 5242880)
                         {
                             novoProduto.Foto = memoryStream.ToArray();
@@ -174,7 +174,7 @@ namespace TechStore.Controllers
             {
                 return NotFound();
             }
-            // Retorna o arquivo (bytes, tipo mime) 
+  
             return File(produto.Foto, "image/jpeg");
         }
 

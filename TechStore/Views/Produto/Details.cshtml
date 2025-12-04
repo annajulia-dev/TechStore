@@ -24,6 +24,11 @@
                     <li><a asp-action="Enter" asp-controller="Home"><i class="ph ph-squares-four"></i> Home</a></li>
                     <li><a asp-action="Index" asp-controller="Produto" class="active"><i class="ph ph-package"></i> Produtos</a></li>
                     <li><a asp-action="Index" asp-controller="Servico"><i class="ph ph-wrench"></i> Serviços</a></li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Categoria">
+                            <i class="ph ph-tag"></i> Categorias
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -65,12 +70,13 @@
                 </div>
 
                 <div class="actions-row">
-                    <a asp-action="Edit" asp-route-id="@Model.Id" asp-controller="Produto">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" asp-controller="Produto" style="text-decoration: none;">
                         <button class="btn btn-edit">
                             <i class="ph ph-pencil-simple"></i> Editar Produto
                         </button>
                     </a>
-                    <a asp-action="Delete" asp-route-id="@Model.Id" asp-controller="Produto">
+
+                    <a asp-action="Delete" asp-route-id="@Model.Id" asp-controller="Produto" style="text-decoration: none;">
                         <button class="btn btn-remove">
                             <i class="ph ph-x"></i> Remover Produto
                         </button>

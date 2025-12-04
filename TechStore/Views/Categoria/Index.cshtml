@@ -1,37 +1,145 @@
 ﻿@model IEnumerable<TechStore.Models.Categoria>
 @{
+    ViewData["Title"] = "Categorias";
 }
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja do Hugo - Categorias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/CategoriaList.css" />
+    <link rel="stylesheet" href="~/css/ServicoIndex.css" />
 
-<a asp-action="Create">Registar categoria</a>
+</head>
+<body>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Titulo</th>
-            <th>Descricao</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @item.Id
-                </td>
-                <td>
-                    @item.Titulo
-                </td>
-                <td>
-                    @item.Descricao
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
-                </td>
-            </tr>
+    <aside>
+        <div>
+            <div class="logo">Loja do Hugo</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a asp-action="Enter" asp-controller="Home">
+                            <i class="ph ph-squares-four"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Produto">
+                            <i class="ph ph-package"></i> Produtos
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Servico">
+                            <i class="ph ph-wrench"></i> Serviços
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Categoria" class="active">
+                            <i class="ph ph-tag"></i> Categorias
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-        }
-    </tbody>
-</table>
+        <div class="user-profile">
+            <div class="avatar-initial">J</div>
+            <div class="user-info">
+                <h4>João Pires</h4>
+                <p>joaopires@emailsdasilva.com</p>
+            </div>
+            <i class="ph ph-caret-right"></i>
+        </div>
+    </aside>
+
+    <main>
+        <h2>Categorias</h2>
+
+        <div class="categories-list">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var categoria in Model)
+                {
+                    <a asp-action="Details" asp-route-id="@categoria.Id" asp-controller="Categoria" class="category-row">
+
+                        <div class="category-content-wrapper">
+                            <div class="category-icon-box">
+                                <i class="ph ph-tag"></i>
+                            </div>
+
+                            <div class="category-text">
+                                <h3>@categoria.Titulo</h3>
+                                <p>@categoria.Descricao</p>
+                            </div>
+                        </div>
+
+                        <i class="ph ph-caret-right action-arrow"></i>
+                    </a>
+                }
+            }
+            else
+            {
+                <div style="text-align: center; padding: 40px; background: #f9fafb; border-radius: 12px; color: var(--text-secondary);">
+                    <i class="ph ph-tag" style="font-size: 32px; margin-bottom: 8px; display: block;"></i>
+                    Nenhuma categoria cadastrada.
+                </div>
+            }
+        </div>
+
+        <a asp-action="Create" asp-controller="Categoria" style="text-decoration: none;">
+            <button class="btn-create">
+                <i class="ph ph-plus" style="font-size: 16px;"></i>
+                Criar Categoria
+            </button>
+        </a>
+
+        <h2>Pedidos Recentes</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th><i class="ph ph-package"></i> Item</th>
+                        <th><i class="ph ph-text-aa"></i> Cliente</th>
+                        <th><i class="ph ph-record"></i> Status</th>
+                        <th><i class="ph ph-calendar-blank"></i> Data</th>
+                        <th><i class="ph ph-tag"></i> Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#" class="link-product">Pedido #1024</a></td>
+                        <td>
+                            <div class="user-cell">
+                                <div class="avatar-initial" style="background: #99f6e4; color: #115e59; width: 28px; height: 28px; font-size: 12px;">M</div>
+                                Mariana Cardoso
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-delivered">Concluído</span></td>
+                        <td>24 de Abril, 2026</td>
+                        <td>Hardware</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="link-product">Pedido #1025</a></td>
+                        <td>
+                            <div class="user-cell">
+                                <div class="avatar-initial" style="background: #bfdbfe; color: #1e40af; width: 28px; height: 28px; font-size: 12px;">A</div>
+                                Anna Julia
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-progress">Em Processamento</span></td>
+                        <td>24 de Abril, 2026</td>
+                        <td>Periféricos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</body>
+</html>

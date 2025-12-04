@@ -1,21 +1,88 @@
 ﻿@model TechStore.Models.Categoria
-
 @{
+    ViewData["Title"] = "Cadastrar Categoria";
 }
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja do Hugo - @ViewData["Title"]</title>
 
-<h1>
-    Register a new categoria
-</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<div asp-validation-summary="All" class="text-danger"></div> <!--Msg de erro caso o create de errado-->
+    <link rel="stylesheet" href="~/css/ProductCreate.css" />
+</head>
+<body>
 
-<form asp-action="Create" method="post">
+    <aside>
+        <div>
+            <div class="logo">Loja do Hugo</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a asp-action="Enter" asp-controller="Home">
+                            <i class="ph ph-squares-four"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Produto">
+                            <i class="ph ph-package"></i> Produtos
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Servico">
+                            <i class="ph ph-wrench"></i> Serviços
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Categoria" class="active">
+                            <i class="ph ph-tag"></i> Categorias
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    <label>Titulo:</label>
-    <input asp-for="Titulo" />
-    <label>Descrição:</label>
-    <input asp-for="Descricao" />
+        <div class="user-profile">
+            <div class="avatar-initial">J</div>
+            <div class="user-info">
+                <h4>João Pires</h4>
+                <p>joaopires@emailsdasilva.com</p>
+            </div>
+            <i class="ph ph-caret-right"></i>
+        </div>
+    </aside>
 
-    <button type="submit">Registrar</button>
-</form>
+    <main>
+        <h2>Cadastrar Categoria</h2>
+
+        <form asp-action="Create" asp-controller="Categoria" method="post" class="form-card">
+
+            <div class="form-group">
+                <label asp-for="Titulo">Título da Categoria</label>
+                <input asp-for="Titulo" type="text" id="titulo" placeholder="Ex: Hardware" required>
+                <span asp-validation-for="Titulo" style="color:red; font-size:12px;"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Descricao">Descrição</label>
+                <textarea asp-for="Descricao" id="descricao" placeholder="Descreva o tipo de produtos desta categoria..."></textarea>
+                <span asp-validation-for="Descricao" style="color:red; font-size:12px;"></span>
+            </div>
+
+            <div class="form-actions">
+                <a asp-action="Index" asp-controller="Categoria" style="text-decoration:none;">
+                    <button type="button" class="btn btn-cancel">Cancelar</button>
+                </a>
+                <button type="submit" class="btn btn-save">Cadastrar Categoria</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

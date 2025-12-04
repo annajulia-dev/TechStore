@@ -1,4 +1,4 @@
-CREATE DATABASE db_TechStore;
+CREATE DATABASE IF NOT EXISTS db_TechStore;
 
 use db_TechStore;
 

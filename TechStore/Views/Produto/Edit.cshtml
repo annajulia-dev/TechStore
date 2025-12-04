@@ -21,6 +21,11 @@
                     <li><a asp-action="Enter" asp-controller="Home"><i class="ph ph-squares-four"></i> Home</a></li>
                     <li><a asp-action="Index" asp-controller="Produto" class="active"><i class="ph ph-package"></i> Produtos</a></li>
                     <li><a asp-action="Index" asp-controller="Servico"><i class="ph ph-wrench"></i> Serviços</a></li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Categoria">
+                            <i class="ph ph-tag"></i> Categorias
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -92,7 +97,7 @@
             </div>
 
             <div class="form-actions">
-                <button asp-action="Index" asp-controller="Produto">Cancelar</button>
+                <button class="btn btn-cancel" asp-action="Index" asp-controller="Produto">Cancelar</button>
                 <button type="submit" class="btn btn-save">Salvar Alterações</button>
             </div>
 

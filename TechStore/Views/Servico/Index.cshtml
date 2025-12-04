@@ -3,6 +3,20 @@
     ViewData["Title"] = "Serviços";
 }
 
+<style>
+    .card-image {
+        width: 100%; 
+        height: 140px;
+        object-fit: cover; 
+        object-position: center;
+
+        background-color: #e5e7eb;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        display: block; 
+    }
+</style>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -39,6 +53,11 @@
                         <a asp-action="Index" asp-controller="Servico" class="active">
                             <i class="ph ph-wrench"></i>
                             Serviços
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Categoria">
+                            <i class="ph ph-tag"></i> Categorias
                         </a>
                     </li>
                 </ul>
@@ -118,8 +137,8 @@
                         <td><a href="#" class="link-product">Serviço 2</a></td>
                         <td>
                             <div class="user-cell">
-                                <div class="avatar-initial" style="background: #bfdbfe; color: #1e40af; width: 28px; height: 28px; font-size: 12px;">M</div>
-                                Mateus Silva
+                                <div class="avatar-initial" style="background: #bfdbfe; color: #1e40af; width: 28px; height: 28px; font-size: 12px;">A</div>
+                                Anna Julia
                             </div>
                         </td>
                         <td><span class="status-badge status-progress">Em Andamento</span></td>

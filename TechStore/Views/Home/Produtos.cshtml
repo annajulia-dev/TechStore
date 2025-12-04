@@ -1,5 +1,5 @@
-﻿@model IEnumerable<TechStore.Models.Produto>
-@{
+﻿@model TechStore.Models.ProdutosViewModel
+    @{
     ViewData["Title"] = "Produtos";
 }
 
@@ -10,27 +10,27 @@
 
     <div class="filter-container">
         <p class="filter-text">
-            Linha Gamer
+            Todos
         </p>
         <div class="filter-button-container">
-            <button class="filter-button">Linha básica</button>
-            <button class="filter-button">Linha intermediária</button>
-            <button class="filter-button-selected">Linha Gamer</button>
-            <button class="filter-button">Linha Profissional</button>
+        @foreach(var categoria in Model.Categorias)
+        {
+            <button class="filter-button">@categoria.Titulo</button>
+        }
         </div>
     </div>
 
 <div class="products-area">
-    @foreach(var item in Model)
+    @foreach(var produto in Model.Produtos)
     {
         <div class="product-preview">
             <div class="product-image-container">
-                <img class="product-image" src="@Url.Action("PegarFoto", "Produto", new { id = @item.Id })">
+                <img class="product-image" src="@Url.Action("PegarFoto", "Produto", new { id = @produto.Id })">
             </div>
-            <p class="product-title">@item.Titulo</p>
-            <p class="product-description">@item.Descricao</p>
-            <p class="product-price"><strong style="color: #0A58CA;">R$ @item.Valor</strong> à vista no PIX</p>
-            <p class="product-price">ou até <strong>10x de R$ @(item.Valor / 10)</strong></p>
+            <p class="product-title">@produto.Titulo</p>
+            <p class="product-description">@produto.Descricao</p>
+            <p class="product-price"><strong style="color: #0A58CA;">R$ @produto.Valor</strong> à vista no PIX</p>
+            <p class="product-price">ou até <strong>10x de R$ @(produto.Valor / 10)</strong></p>
             <button class="buy-button">Comprar</button>
         </div>
     }
